@@ -23,7 +23,7 @@ function NoteBlock () {
     setTaskList(elemt => [...taskList, {
       id: elemt.length,
       date: new Date(),
-      note: note
+      note: note.toUpperCase(),
     }])
     setNote('');
   }

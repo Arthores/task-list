@@ -14,12 +14,7 @@ function NoteList () {
           className='task'
         >
           { item.note }
-          <button>
-            Delete
-          </button>
-          <button>
-            Update
-          </button>
+
         </div>
       )) }
     </section>
