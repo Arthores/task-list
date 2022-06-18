@@ -1,0 +1,11 @@
+.title-box {
+  border: 1px solid blue;
+  display:flex;
+  padding: 10px;
+  height: 15%;
+  width: 100%;
+}
+
+/* .add-note {
+
+} */

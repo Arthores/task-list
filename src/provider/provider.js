@@ -2,11 +2,17 @@ import TaskContext from "./context";
 import { useState } from "react";
 
 function Provider({ children }) {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(false);
+  const [note, setNote] = useState('');
+  const [taskList, setTaskList] = useState([]);
 
   const store = {
     dark,
-    setDark
+    note,
+    taskList,
+    setDark,
+    setNote,
+    setTaskList,
   };
 
   return (
