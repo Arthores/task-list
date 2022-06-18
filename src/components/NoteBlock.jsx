@@ -15,6 +15,11 @@ function NoteBlock () {
   }
 
   const onAddNote = () => {
+    if (note === '') return (
+      setTaskList([...taskList]),
+      global.alert("Campo vazio!!")
+    );
+
     setTaskList(elemt => [...taskList, {
       id: elemt.length,
       date: new Date(),
@@ -24,27 +29,27 @@ function NoteBlock () {
   }
 
   return (
-    <div className="note-block">
+    <>
       <h2 className="title-box"> Task List </h2>
-      <label htmlFor="add-note">
+      <section className="add-note-box">
         <input
-        type="text"
-        name="add-note"
-        id="add-note"
-        className="add-note"
-        placeholder="Create a new task..."
-        value={ note }
-        onChange={ handleChange }
-        />
-      <button
-        type="button"
-        className="btn-add-note"
-        onClick={ onAddNote }
-      >
-        +
-      </button>
-      </label>
-    </div>
+          type="text"
+          name="add-note"
+          id="add-note"
+          className="add-note"
+          placeholder="Create a new task..."
+          value={ note }
+          onChange={ handleChange }
+          />
+        <button
+          type="button"
+          className="btn-add-note"
+          onClick={ onAddNote }
+        >
+          +
+        </button>
+      </section>
+    </>
   )
 }
 

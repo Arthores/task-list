@@ -27,3 +27,13 @@
   background-color: #f4f1d6;
   color: #674ea7;
 }
+
+
+.note-list {
+  border: 1px solid #ff0043;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 15%;
+  width: 60%;
+}

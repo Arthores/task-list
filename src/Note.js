@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import TaskContext from "./provider/context";
+import NoteBlock from "./components/NoteBlock";
+import NoteList from "./components/NoteList";
 import "./css/desktopPort.css"
-import NoteBlock from "./components/noteBlock";
 
 function Note () {
   const {
@@ -10,7 +11,10 @@ function Note () {
 
   return (
     <main className={ `note ${dark ? "dark-mode" : "light-mode"}` }>
-      <NoteBlock />
+      <div className="note-block">
+        <NoteBlock />
+        <NoteList />
+      </div>
     </main>
   )
 }
