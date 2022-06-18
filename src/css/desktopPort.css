@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0px;
+}
+
+.note-block {
+  background-color: #f4f1d6 ;
+  border: 1px solid black;
+  display: flex;
+  height: 635px;
+  width: 1365px;
+}
