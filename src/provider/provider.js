@@ -4,10 +4,7 @@ import { useState } from "react";
 function Provider({ children }) {
   const [dark, setDark] = useState(false);
   const [note, setNote] = useState('');
-  const [taskList, setTaskList] = useState([{
-    id: 0,
-  }
-  ]);
+  const [taskList, setTaskList] = useState([]);
 
   const store = {
     dark,

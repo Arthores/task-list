@@ -9,14 +9,16 @@ function NoteList () {
   } = useContext(TaskContext);
 
   const deleteTask = (i) => {
-    const { id } = taskList[i]
-    const e = taskList.splice(id);
-    // if(taskList.indexOf(1)) {
-    //   global.alert('ok vc pensou certo')
-    // }
-    console.log(e);
+    const elemt = taskList[i];
+    const { id } = elemt;
+    const e = taskList.filter((task) => task.id !== id);
+    if (taskList.length === 0) {
+      return setTaskList([]);
+    }
     setTaskList(e);
   }
+
+  const deleteAll = () => setTaskList([]);
 
   // const completedTask = () => {
   //   set
