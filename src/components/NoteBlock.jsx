@@ -20,8 +20,8 @@ function NoteBlock () {
       global.alert("Campo vazio!!")
     );
 
-    setTaskList(elemt => [...taskList, {
-      id: elemt.length,
+    setTaskList([...taskList, {
+      id: taskList.length,
       date: new Date(),
       note: note.toUpperCase(),
     }])

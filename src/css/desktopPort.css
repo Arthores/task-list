@@ -39,5 +39,7 @@
 }
 
 .task {
+  display: flex;
+  flex-direction: row;
   font-family: 'Indie Flower', cursive;
 }
