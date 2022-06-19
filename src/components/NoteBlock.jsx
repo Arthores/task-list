@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import '../css/note.css';
 import TaskContext from "../provider/context";
+import { BiTaskX, BiListPlus } from 'react-icons/bi';
+import '../css/note.css';
 
 function NoteBlock () {
   const {
@@ -27,6 +28,11 @@ function NoteBlock () {
     }])
     setNote('');
   }
+  
+
+  const deleteAll = () => setTaskList([]);
+
+  // for completed page <GoTasklist />
 
   return (
     <>
@@ -46,7 +52,14 @@ function NoteBlock () {
           className="btn-add-note"
           onClick={ onAddNote }
         >
-          +
+          <BiListPlus />
+        </button>
+        <button
+          type="button"
+          className="btn-add-note"
+          onClick={ deleteAll }
+        >
+          < BiTaskX />
         </button>
       </section>
     </>

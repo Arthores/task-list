@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import TaskContext from "../provider/context";
-import { GoTrashcan } from 'react-icons/go';
+import { GoPencil, GoTrashcan } from 'react-icons/go';
 
 function NoteList () {
   const {
@@ -18,7 +18,12 @@ function NoteList () {
     setTaskList(e);
   }
 
-  const deleteAll = () => setTaskList([]);
+  const updateTask = (i) => {
+    const elemt = taskList[i];
+    const { id } = elemt;
+    global.alert('Progress', id)
+  }
+  
 
   // const completedTask = () => {
   //   set
@@ -32,7 +37,6 @@ function NoteList () {
             key={ item.id }
             id="task"
             className='task'
-            // onClick={ }
           >
             { item.note }
           <button
@@ -40,6 +44,12 @@ function NoteList () {
             className="delete"
           >
             <GoTrashcan/>
+          </button>
+          <button
+            onClick={ () => updateTask(item.id) }
+            className="delete"
+          >
+            <GoPencil/>
           </button>
           </div>
         </label>
