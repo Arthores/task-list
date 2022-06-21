@@ -1,11 +1,15 @@
 import React, { useContext } from "react";
 import TaskContext from "../provider/context";
 import { GoPencil, GoTrashcan } from 'react-icons/go';
+import InputEdit from "./InputEdit";
 
 function NoteList () {
   const {
     taskList,
     setTaskList,
+    updated,
+    setUpdate,
+    setCurrentTask,
   } = useContext(TaskContext);
 
   const deleteTask = (i) => {
@@ -18,10 +22,11 @@ function NoteList () {
     setTaskList(e);
   }
 
-  const updateTask = (i) => {
+  const updateBtn = (i) => {
+    setUpdate(true);
     const elemt = taskList[i];
-    const { id } = elemt;
-    global.alert('Progress', id)
+    setCurrentTask(elemt);
+    console.log(elemt);
   }
   
 
@@ -31,7 +36,8 @@ function NoteList () {
 
   return (
     <section className="note-list">
-      { taskList.map((item) => (
+      { updated ? <InputEdit /> :
+        taskList.map((item) => (
         <label htmlFor="task">
           <div
             key={ item.id }
@@ -46,7 +52,7 @@ function NoteList () {
             <GoTrashcan/>
           </button>
           <button
-            onClick={ () => updateTask(item.id) }
+            onClick={ () => updateBtn(item.id) }
             className="delete"
           >
             <GoPencil/>
