@@ -11,12 +11,11 @@ function InputEdit () {
   } = useContext(TaskContext);
 
   const handleChange = (e) => {
-    setUpdateTask(e.target.value); // salva o input (funcioonando)
+    setUpdateTask(e.target.value);
   }
   
-  const newTask = () => { // era pra depositar o valor de 'updated' em note.
+  const newTask = () => {
     setCurrentTask(elemt => elemt.note = updateTask.toUpperCase());
-    console.log(currentTask);
     setUpdateTask('');
     setUpdate(false);
   };

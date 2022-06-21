@@ -26,7 +26,6 @@ function NoteList () {
     setUpdate(true);
     const elemt = taskList[i];
     setCurrentTask(elemt);
-    console.log(elemt);
   }
   
 
