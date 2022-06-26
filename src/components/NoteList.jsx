@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import TaskContext from "../provider/context";
 import { GoPencil, GoTrashcan } from 'react-icons/go';
 import InputEdit from "./InputEdit";
+import '../css/noteList.css';
 
 function NoteList () {
   const {
@@ -43,7 +44,7 @@ function NoteList () {
             id="task"
             className='task'
           >
-            { item.note }
+            { item.id + 1}° - { item.note }
           <button
             onClick={ () => deleteTask(item.id) }
             className="delete"
@@ -52,7 +53,7 @@ function NoteList () {
           </button>
           <button
             onClick={ () => updateBtn(item.id) }
-            className="delete"
+            className="update"
           >
             <GoPencil/>
           </button>

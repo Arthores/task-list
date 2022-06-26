@@ -8,7 +8,6 @@
 }
 
 .note {
-  border: 1px solid black;
   display: flex;
   align-items: center;
   height: 635px;
@@ -16,9 +15,9 @@
 }
 
 .note-block {
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
-  border: 1px solid #ff0043;
   height: 95%;
   width: 65%;
 }
@@ -28,18 +27,10 @@
   color: #674ea7;
 }
 
-
 .note-list {
-  border: 1px solid #ff0043;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 15%;
+  overflow-y: scroll;
+  height: 60%;
   width: 60%;
-}
-
-.task .update-intup {
-  display: flex;
-  flex-direction: row;
-  font-family: 'Indie Flower', cursive;
 }

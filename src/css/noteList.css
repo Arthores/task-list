@@ -1,0 +1,14 @@
+.task {
+  padding: 6px;
+  flex-direction: row;
+  font-family: 'Indie Flower', cursive;
+  width: 500px;
+}
+
+
+.delete, .update {
+  margin: 4px;
+  height: 23px;
+  width: 23px;
+  color:blue;
+}

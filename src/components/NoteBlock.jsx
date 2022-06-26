@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import TaskContext from "../provider/context";
 import { BiTaskX, BiListPlus } from 'react-icons/bi';
-import '../css/note.css';
+import '../css/noteBlock.css';
 
 function NoteBlock () {
   const {
@@ -37,16 +37,17 @@ function NoteBlock () {
   return (
     <>
       <h2 className="title-box"> Task List </h2>
-      <section className="add-note-box">
+      <form className="add-note-box">
         <input
           type="text"
           name="add-note"
           id="add-note"
           className="add-note"
-          placeholder="Create a new task..."
+        maxLength='60'
+        placeholder="Create a new task..."
           value={ note }
           onChange={ handleChange }
-          />
+        />
         <button
           type="button"
           className="btn-add-note"
@@ -61,7 +62,7 @@ function NoteBlock () {
         >
           < BiTaskX />
         </button>
-      </section>
+      </form>
     </>
   )
 }

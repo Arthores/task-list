@@ -6,7 +6,6 @@ function InputEdit () {
     setUpdate,
     updateTask,
     setUpdateTask,
-    currentTask,
     setCurrentTask,
   } = useContext(TaskContext);
 
@@ -27,6 +26,7 @@ function InputEdit () {
       <input
         type="text"
         placeholder="Nova nota..."
+        maxLength='60'
         value={ updateTask }
         onChange={ handleChange }
       />
